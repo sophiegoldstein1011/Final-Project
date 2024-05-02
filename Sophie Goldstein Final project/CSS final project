@@ -1,0 +1,102 @@
+:root{
+    --ff-body: 'Heebo', sans-serif;
+    --ff-heading: 'Oswald', sans-serif;
+
+    --clr-primary-400: #ffff00;
+    --clr-neutral-900: hsl(0 0% 0%);
+    --clr-neutral-100: hsl(0 0 100%);
+
+    --fs-xl: clamp(3rem, 1rem + 10vw, 10rem);
+    --fs-l: clamp(3rem, 1rem + 3vw, 10rem);
+    --fs600: 2rem;
+    --fs-500: 1.5rem;
+    --fs-400: 1.125 rem;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+blockquote { 
+    margin: 0;
+    padding: 700;
+  text-align: center;
+}
+
+img{ 
+    display: grid ;
+    max-width: 200%;
+    padding: 0 2 rem;
+}
+
+body{
+    font-family: var(--ff-body);
+    font-size: var(--fs-400) ;
+    line-height: 1.6;
+ 
+}
+
+h1,
+blockquote{
+    font-family: var(--ff-heading);
+    font-weight: 900;
+}
+
+h1{
+    font-size: var(--fs-xl);
+    line-height: 1;
+    text-transform: uppercase ;
+    break-after: auto;
+}
+
+h2{
+    font-family: var(--ff-heading);
+    font-size: var(--fs-l);
+    line-height: 1;
+    text-transform: uppercase ;
+    color: #32488a;
+    padding: 2%;
+    break-before: initial;
+}
+h3{
+    font-family: var(--ff-heading);
+    font-size: var(--fs-s);
+    line-height: 2;
+    text-transform: regular;
+  
+}
+
+article {
+    display: flex;
+  font-family: "Times New Roman", Times, serif;
+}
+
+article > *:not(img)    
+{padding: 0 2rem; 
+}
+
+.article-body {
+  columns: 3 25ch;
+}
+
+@media (min-width: 30em) {
+    article {
+        grid-template-columns: 2fr 2fr;
+    }
+
+    article > img {
+        grid-row: 1/ 5;
+        height: 100%;
+        object-fit: cover
+    }
+
+    article > *:not(img) {
+        grid-column: 2/-1;
+    } 
+
+}
